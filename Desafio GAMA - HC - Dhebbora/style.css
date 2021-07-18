@@ -1,7 +1,6 @@
-*{
+ *{
   padding: 0;
   margin: 0;
-  box-sizing: 0;
 }
 
 body{
@@ -9,6 +8,7 @@ body{
   height: 100%;
   font-family: 'Roboto', sans-serif;
 }
+
 .nav01{
   display: flex;
   justify-content: space-evenly;
@@ -18,6 +18,7 @@ body{
   color: rgb(255, 255, 255);
   font-weight: 700;
 }
+
 .nav01_card{
   display: flex;
   justify-content: space-evenly;
@@ -45,7 +46,7 @@ body{
   color: #f1dcd7;
 }
 
-
+/*Navegação 2*/
 .nav02{
   display: flex;
   justify-content: space-evenly;
@@ -56,6 +57,7 @@ body{
   background-color: rgb(255, 255, 255);
   font-weight: 500;
 }
+
 .link-contato{
   color: #cc6633;
   text-decoration: none;
@@ -83,6 +85,8 @@ body{
 
 }
 
+
+/*Administração*/
 .administracao{
   display: flex;
   justify-content: space-around;
@@ -91,7 +95,6 @@ body{
 }
 
 .adm{
-  display: flex;
   justify-self: space-between;
   align-items: center;
   list-style: none;
@@ -109,12 +112,15 @@ body{
 }
 
 
+/*Navegação*/
 .nav3{
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px 70px;
   background-color: #cc6633;
+
+  flex-wrap: wrap;
 }
 
 .navegacao{
@@ -122,12 +128,14 @@ body{
   align-items: center;
   justify-content: space-between;
   padding-right: 20px;
+  flex-wrap: wrap;
 
   width: 60%;
   
 }
 .navegacao li{
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .navegacao a{
@@ -161,7 +169,7 @@ body{
   padding: 20px 70px;
 }
 
-
+/* Container*/
 .container{
   display: flex;
   width: auto;
@@ -170,13 +178,13 @@ body{
 
 .buscas{
   flex-direction: column;
-  border-right: 2px solid #cc6633;
+  border-right: 2px solid #eb5003;
   width: 15%;
 }
 .texto_lateral{
   font-size: 22px;
   font-weight: 700;
-  border-bottom: 2px solid #cc6633;
+  border-bottom: 2px solid #eb5003;
 
 }
 .cards{
@@ -195,6 +203,7 @@ body{
   line-height: 1px;
 }
 
+
 /* Modal */
 #myModal{
   display: flex;
@@ -203,11 +212,20 @@ body{
   padding-top: 20%;
 }
 .modal-content{
-  background-color: #cc6633;
+  background-color: #000000;
   color: #f1dcd7;
   display: block;
   text-align: center;
   justify-content: center;
+}
+.bf{
+  color: #eb5003;
+  font-size: 39px;
+  font-weight: 700;
+}
+.desc{
+  color: #eb5003;
+  font-weight: 700;
 }
 .modal-title{
   font-size: 28px;
@@ -231,10 +249,99 @@ body{
 }
 
 .btn-primary{
-  color: #cc6633;
-  background-color: #f1dcd7;
+  background-color: #eb5003;
+  color: #ffffff;
 }
 .btn-primary:hover{
-  background-color: #000000;
-  color: #f1dcd7;
+  color: #eb5003;
+  background-color: #ffffff;
+}
+
+footer{
+  width: 100%;
+  padding: 5px;
+  background-color: #cc6633;
+}
+.footer-txt{
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  margin-top: 8px;
+  justify-content: center;
+}
+.link_dbr{
+  text-decoration: none;
+  color: #ffffff;
+  border-bottom: 2px solid #c4c4c4;
+}
+.link_dbr:hover{
+  text-decoration: none;
+  color: #e9f583;
+  border-bottom: 2px solid #c4c4c4;
+}
+
+@media screen and (max-width: 900px) and (min-width: 100px){
+  .nav01{
+    display: none;
+  }
+  .nav02{
+    display:flex;
+    justify-content: space-around;
+    margin-right: 52px;
+  }
+  .link-contato, .link-contato:hover{
+    display:none;
+  }
+  .quadro_logo{
+    padding-left: 73px;
+  }
+  .administracao{
+    padding-left: 83px;
+  }
+  
+  .adm li{
+    width: 38px;
+    height: 38px;
+    border-radius: 60px; 
+  }
+
+  .nav3{
+    display: grid;
+    width: 100%;
+    padding: 22px;
+    font-size: 18px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+  }
+  .navegacao{
+   display: flex;
+   width: 100%;
+   
+  }
+  .navegacao li{
+  display: flex;
+  padding: 8px 12px;
+  justify-content: space-around;
+  }
+  .pesquisar{
+    width: 100%;
+    padding: 0;
+  }
+  .buscas{
+    display: none;
+  }
+  .cards{
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    }
+  .card-imagem-01{
+    padding: 0;
+  }
+  .imagem-cards{
+    width: 70%;
+    height: 80%;
+  }
+
 }
